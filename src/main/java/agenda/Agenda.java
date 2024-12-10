@@ -12,10 +12,16 @@ public class Agenda {
      *
      * @param e the event to add
      */
-    public void addEvent(Event e) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+    private List<Event> events;
+
+    public Agenda() {
+        this.events = new ArrayList<>();
     }
+
+    public void addEvent(Event e) {
+        events.add(e);
+    }
+
 
     /**
      * Computes the events that occur on a given day
@@ -24,7 +30,17 @@ public class Agenda {
      * @return a list of events that occur on that day
      */
     public List<Event> eventsInDay(LocalDate day) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        List<Event> resultats = new ArrayList<>();
+        for (Event e : events) {
+            LocalDate Datedeb = e.getStart().toLocalDate();
+            LocalDate Datefin = e.getStart().plus(e.getDuration()).toLocalDate();
+            if (Datedeb.equals(day) || Datefin.equals(day)  && (day.isEqual(Datefin) || day.isBefore(Datefin))) {
+                resultats.add(e);;
+            }
+        }
+        return resultats;
     }
 }
+
+
+

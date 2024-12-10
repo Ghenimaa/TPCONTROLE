@@ -1,2 +1,30 @@
 Ecrire ici votre réponse à la question UML.
 
+On constate certaines différences entre ces deux diagrammes UML.
+Par exemple, la figure 2 n'a pas d'héritage, elle a uniquement de la composition, et
+ce choix n'est pas très judidiceux. Par exemple, la relation d'héritage entre Event et
+RepetitiveEvent est tout a fait justifié. Elle permet de faciliter l'extension du code
+sans modifier la classe de base Event.
+CLASSE EVENT
+On constate aussi que les méthodes des deux diagrammes UML sont différentes:
+La figure 2 contient plus de méthodes, notamment des méthodes set et add, ce qui permet de
+faciliter notre travail. Ces méthodes sont des choix judicieux;
+On constate tout de même certains points communs entre ces deux diagrammes par exemples
+les attributs et le constructeur et is IsinDAY
+
+La classe REPETITION:
+Egalement, presque pareil juste il y a un getter dans la figure 3 et un setter dans la figure
+2, ici les deux sont justifiées.
+Dans la figuree 2, on constate une approche par composition, cette composition n'est pas tout
+à fait justifié ici, l'héritage est plus adapté.
+
+classe TERMINATION
+on constate de l'héritage pour la figure 3 et de la compostion pour la figure 2, le plus
+judicieux reste l'héritage.
+
+
+
+La solution par héritage est plus intuitive et plus simple à modéliser que celle par
+composotion qui est plus complexe.
+
+
